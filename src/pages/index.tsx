@@ -24,10 +24,12 @@ const Home: NextPage = () => {
 
                 <form action="/api/encrypt" method="POST" encType="multipart/form-data">
                     <input type="file" name="file" multiple={false} />
+                    <input type="text" name="secret" />
                     <button type="submit">Encrypt</button>
                 </form>
                 <form action="/api/decrypt" method="POST" encType="multipart/form-data">
                     <input type="file" name="file" multiple={false} />
+                    <input type="text" name="secret" />
                     <button type="submit">Decrypt</button>
                 </form>
                 <div className={styles.grid}>

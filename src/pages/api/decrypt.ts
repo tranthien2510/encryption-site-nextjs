@@ -16,7 +16,7 @@ handler.post(async (
 
     res.setHeader('Content-Type', file.headers['content-type'])
     res.setHeader('Content-Disposition', 'attachment; filename=' + 'decrypted-' + file.originalFilename)
-    res.send(decrypt(fs.readFileSync(file.path)))
+    res.send(decrypt(fs.readFileSync(file.path), req.body.secret[0]))
 });
 
 export const config = {

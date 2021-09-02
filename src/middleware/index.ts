@@ -5,7 +5,8 @@ import {NextApiRequest, NextApiResponse} from 'next'
 const middleware = nextConnect()
 
 export type NextApiRequestWithFiles = NextApiRequest & {
-    files: Files
+    files: Files,
+    body: Fields
 };
 
 type File = {
@@ -23,10 +24,14 @@ type Files = {
     [key: string]: File[]
 }
 
+type Fields = {
+    [key: string]: Array<any>
+}
+
 middleware.use((req: NextApiRequestWithFiles, res: NextApiResponse, next) => {
     const form = new multiparty.Form()
 
-    form.parse(req, function (err, fields, files: Files) {
+    form.parse(req, function (err, fields: Fields, files: Files) {
         req.body = fields
         req.files = files
         next()
