@@ -38,9 +38,9 @@ const Home: NextPage = () => {
                             <button type="submit" className="button">{t('decrypt')}</button>
                         </form>
                     </div>
-                </div >
-            </main >
-        </div >
+                </div>
+            </main>
+        </div>
     )
 }
 
