@@ -14,3 +14,55 @@ a {
 * {
   box-sizing: border-box;
 }
+
+[type="file"] {
+    display: block;
+}
+    
+.upload {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #eaeaea;
+    color: #000;
+}
+
+.input {
+    display: block;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    outline-color: rgba(0, 0, 255, 0.5);
+    padding: .5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.button {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 6px 12px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 500;
+    appearance: none;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    font-size: 14px;
+}
+
+.button:hover {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 6px 12px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    appearance: none;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
